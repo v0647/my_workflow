@@ -52,9 +52,8 @@ jobs:
         run: cd android && chmod +x ./gradlew
 
       - name: Generate App APK
-         run: |
-         cd android && ./gradlew assembleRelease --no-daemon
-         
+         run: cd android && ./gradlew assembleRelease --no-daemon
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:

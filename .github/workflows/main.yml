@@ -69,4 +69,4 @@ jobs:
           appId: ${{secrets.FIREBASE_APP_ID}}
           serviceCredentialsFileContent: ${{secrets.CREDENTIAL_FILE_CONTENT}}
           groups: testers
-          file: android/app/build/outputs/apk/release/app-release.apk
+          file: /home/runner/work/my_workflow/my_workflow/android/app/build/outputs/apk/release/app-release.apk

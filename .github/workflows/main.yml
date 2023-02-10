@@ -62,3 +62,11 @@ jobs:
           alias: ${{ secrets.ANDROID_ALIAS }}
           name: release
           path: android/app/build/outputs/apk/release/app-release.apk
+          ## Distribute app to Firebase App Distribution for testing / use google play internal track if you have a google play account
+      - name: upload artifact to Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
+        with:
+          appId: 1:638155044511:android:6a6006ac9b431e9089d4aa
+          token: 1//0g8P7f2M-BPwdCgYIARAAGBASNwF-L9Ircx3RaNjxHqayMHpMCDtQhgxxp-ORmjzdZTY23pIQfIvBkts8HIJuP_Lv7K_XxjKtOdU
+          groups: testers
+          file: ${{steps.sign_app.outputs.signedReleaseFile}}

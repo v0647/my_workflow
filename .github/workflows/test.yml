@@ -1,0 +1,16 @@
+name: Android Build ## name of the workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  android-build:
+    name: Android Build
+    runs-on: ubuntu-latest # using ubuntu latest version / or you can use a specific version
+    steps:
+      - name: Create the Keystor
+        run: |
+          echo ${{ secrets.FIREBASE_APP_ID }} | echo ${{ secrets.CREDENTIAL_FILE_CONTENT }} |
+          echo ${{ secrets.CREDENTIAL_FILE_CONTENT }}

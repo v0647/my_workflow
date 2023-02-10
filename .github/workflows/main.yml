@@ -11,12 +11,9 @@ jobs:
     runs-on: ubuntu-latest # using ubuntu latest version / or you can use a specific version
 
     steps:
-     - name: Check out Git repository # clone the repo to local ci workspace
+      - name: Check out Git repository # clone the repo to local ci workspace
         uses: actions/checkout@v2
-        
-      - name: Dedbugg
-        id: yarn-cache-dir-path
-        run: echo ${{ runner.os }}
+
       ## Distribute app to Firebase App Distribution for testing / use google play internal track if you have a google play account
       - name: upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1

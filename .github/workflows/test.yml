@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Create the Keystor
         run: |
-          echo ${{ secrets.FIREBASE_APP_ID }} | echo ${{ secrets.CREDENTIAL_FILE_CONTENT }}
+          echo ${{ secrets.FIREBASE_APP_ID }}

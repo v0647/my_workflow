@@ -58,8 +58,6 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           releaseDirectory: android/app/build/outputs/apk/release
-          signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
-          alias: ${{ secrets.ANDROID_ALIAS }}
           name: release
           path: android/app/build/outputs/apk/release/app-release.apk
 

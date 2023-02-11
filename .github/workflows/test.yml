@@ -7,7 +7,7 @@ on:
 
 jobs:
   android-build:
-    name: Android Build
+    name: Android Buildd
     runs-on: ubuntu-latest # using ubuntu latest version / or you can use a specific version
 
     steps:
@@ -19,11 +19,11 @@ jobs:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '11'
      - name: build release 
-      run: ./gradlew assembleRelease
+       run: ./gradlew assembleRelease
 
      - name: upload artifact to Firebase App Distribution
-      uses: wzieba/Firebase-Distribution-Github-Action@v1
-      with:
+       uses: wzieba/Firebase-Distribution-Github-Action@v1
+       with:
         appId: ${{secrets.FIREBASE_APP_ID}}
         serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
         groups: testers

@@ -53,9 +53,16 @@ jobs:
       - name: Make Gradlew Executable
         run: cd android && chmod +x ./gradlew
 
-      - name: Generate App APK
-        run: |
-          cd android && ./gradlew assembleRelease --no-daemon
+        ## sign generated apk
+      - name: Sign APK
+        id: sign_app
+        uses: r0adkll/sign-android-release@v1
+        with:
+          releaseDirectory: android/app/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
+          alias: androiddebugkey
+          keyStorePassword: 123456
+          keyPassword: 123456
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v1

@@ -67,9 +67,9 @@ jobs:
         ## Distribute app to Firebase App Distribution for testing / use google play internal track if you have a google play account
 
       - name: upload artifact to Firebase App Distribution
-        uses: wzieba/Firebase-Distribution-Github-Action@master
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
-          appId: ${{secrets.FIREBASE_APP_ID}}
+          appId: 1:638155044511:android:6a6006ac9b431e9089d4aa
           serviceCredentialsFileContent: ${{secrets.CREDENTIAL_FILE_CONTENT}}
           groups: testers
           file: android/app/build/outputs/apk/release/app-release.apk

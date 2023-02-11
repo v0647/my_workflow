@@ -10,7 +10,6 @@ jobs:
     name: Android Build
     runs-on: ubuntu-latest # using ubuntu latest version / or you can use a specific version
 
-
     steps:
      - name: Check out Git repository # clone the repo to local ci workspace
        uses: actions/checkout@v2
@@ -20,10 +19,10 @@ jobs:
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '11'
-
-    - name: build release 
+     - name: build release 
       run: ./gradlew assembleRelease
-    - name: upload artifact to Firebase App Distribution
+
+     - name: upload artifact to Firebase App Distribution
       uses: wzieba/Firebase-Distribution-Github-Action@v1
       with:
         appId: ${{secrets.FIREBASE_APP_ID}}

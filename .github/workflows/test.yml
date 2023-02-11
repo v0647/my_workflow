@@ -1,4 +1,4 @@
-name: Android Build ## name of the workflow
+name: Build & upload to Firebase App Distribution 
 
 on:
   push:
@@ -9,7 +9,24 @@ jobs:
   android-build:
     name: Android Build
     runs-on: ubuntu-latest # using ubuntu latest version / or you can use a specific version
+
+
     steps:
-      - name: Create the Keystor
-        run: |
-          echo ${{ secrets.FIREBASE_APP_ID }}
+     - name: Check out Git repository # clone the repo to local ci workspace
+       uses: actions/checkout@v2
+     
+     - name: Set up our JDK environment # setup JDK environment: mandatory as we need to build  android project
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '11'
+
+    - name: build release 
+      run: ./gradlew assembleRelease
+    - name: upload artifact to Firebase App Distribution
+      uses: wzieba/Firebase-Distribution-Github-Action@v1
+      with:
+        appId: ${{secrets.FIREBASE_APP_ID}}
+        serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
+        groups: testers
+        file: app/build/outputs/apk/release/app-release-unsigned.apk

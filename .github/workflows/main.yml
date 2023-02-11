@@ -65,9 +65,9 @@ jobs:
         with:
           releaseDirectory: android/app/build/outputs/apk/release
           signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
-          alias: androiddebugkey
+          alias: my-key-alias
           keyStorePassword: 123456
-          keyPassword: android
+          keyPassword: 123456
         env:
           # override default build-tools version (29.0.3) -- optional
           BUILD_TOOLS_VERSION: '30.0.2'

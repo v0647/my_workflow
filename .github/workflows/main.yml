@@ -3,7 +3,7 @@ name: Android Build ## name of the workflow
 on:
   push:
     branches:
-      - mainsd
+      - mains
 
 jobs:
   android-build:
@@ -73,3 +73,4 @@ jobs:
           serviceCredentialsFileContent: ${{secrets.CREDENTIAL_FILE_CONTENT}}
           groups: testers
           file: android/app/build/outputs/apk/release/app-release.apk
+          debug: true

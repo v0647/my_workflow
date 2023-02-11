@@ -52,7 +52,7 @@ jobs:
             ${{ runner.os }}-gradle-caches-
       - name: Make Gradlew Executable
         run: cd android && chmod +x ./gradlew
-          cd android/app && echo ${{ secrets.ANDROID_SIGNING_KEY }} | base64 -d > my-upload-key.keystore
+
       - name: Generate App APK
         run: |
           cd android && ./gradlew assembleRelease --no-daemon

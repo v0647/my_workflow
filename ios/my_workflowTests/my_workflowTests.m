@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface my_workflowTests : XCTestCase
+@interface BCAETests : XCTestCase
 
 @end
 
-@implementation my_workflowTests
+@implementation BCAETests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

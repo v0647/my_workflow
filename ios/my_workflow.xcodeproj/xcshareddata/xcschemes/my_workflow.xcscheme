@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "my_workflow.app"
-               BlueprintName = "my_workflow"
-               ReferencedContainer = "container:my_workflow.xcodeproj">
+               BuildableName = "BCAE.app"
+               BlueprintName = "BCAE"
+               ReferencedContainer = "container:BCAE.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "my_workflowTests.xctest"
-               BlueprintName = "my_workflowTests"
-               ReferencedContainer = "container:my_workflow.xcodeproj">
+               BuildableName = "BCAETests.xctest"
+               BlueprintName = "BCAETests"
+               ReferencedContainer = "container:BCAE.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "my_workflow.app"
-            BlueprintName = "my_workflow"
-            ReferencedContainer = "container:my_workflow.xcodeproj">
+            BuildableName = "BCAE.app"
+            BlueprintName = "BCAE"
+            ReferencedContainer = "container:BCAE.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "my_workflow.app"
-            BlueprintName = "my_workflow"
-            ReferencedContainer = "container:my_workflow.xcodeproj">
+            BuildableName = "BCAE.app"
+            BlueprintName = "BCAE"
+            ReferencedContainer = "container:BCAE.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

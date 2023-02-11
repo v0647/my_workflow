@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.my_workflow"
+    namespace "com.bcae2"
     defaultConfig {
-        applicationId "com.my_workflow"
+        applicationId "com.bcae2"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

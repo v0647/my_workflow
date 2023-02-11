@@ -1,4 +1,4 @@
-package com.my_workflow;
+package com.bcae2;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

@@ -3,7 +3,7 @@ name: Android Build ## name of the workflow
 on:
   push:
     branches:
-      - main
+      - vp_develop
 
 jobs:
   android-build:
